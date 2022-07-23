@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://unpkg.com/bootstrap@4.6.2/dist/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+   background-image: url('./assets/WildOrient_Background.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+
+
+.heading{
+  margin: 20px!important;
+  color: white;  
+}
+
+.table-heading-font{
+  font-size: 1.3em;
+  font-weight: 500;
+  color: black;
+}
+
+.loading-indicator {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+
+.mat-form-field {
+  display: block !important;
+}

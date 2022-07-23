@@ -1,0 +1,21 @@
+
+// mat-label change size of text
+:host ::ng-deep .mat-form-field-label {
+    color: white!important;
+    font-size: 15px!important;
+}
+
+//Changes color of text inside input
+:host ::ng-deep .mat-form-field.mat-warn .mat-input-element, .mat-form-field-invalid .mat-input-element {
+    color: white;
+}
+
+//Changes the outline appearance when focused
+:host ::ng-deep .mat-form-field-appearance-fill .mat-form-field-ripple { 
+    background-color: white!important;
+}
+
+//Changes the outline appearance before
+:host ::ng-deep .mat-form-field-appearance-fill .mat-form-field-underline::before {
+    background-color: white!important;
+}

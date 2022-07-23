@@ -1,0 +1,51 @@
+<h2 mat-dialog-title class="text-center">{{header}}</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="formData">
+        <div class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>First Name</mat-label>
+                <input matInput formControlName="FirstName" required>
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>Last Name</mat-label>
+                <input matInput formControlName="LastName" required>
+            </mat-form-field>
+        </div>
+
+        <div class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>Gender</mat-label>
+                <mat-select formControlName="Gender" required>
+                    <mat-option value="Male">Male</mat-option>
+                    <mat-option value="Female">Female</mat-option>
+                    <mat-option value="Other">Other</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>Date of Birth</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="DateOfBirth" required>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <div class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>Policy No.</mat-label>
+                <input matInput formControlName="PolicyNo" required>
+            </mat-form-field>
+        </div>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions class="float-right">
+    <button mat-button *ngIf="isNew" (click)="addPolicy()" class="btn btn-primary" name="submit" type="button">Add
+        Policy</button>
+    <button mat-button *ngIf="!isNew" (click)="updatePolicy()" class="btn btn-primary" name="submit"
+        type="button">Update Policy</button>
+</mat-dialog-actions>
